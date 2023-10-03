@@ -19,7 +19,7 @@ app.get("/", function(req, res){
     res.sendFile(__dirname + "/index.html");
 })
 
-app.post("/", async function (req, res) {
+app.post("/api/", async function (req, res) {
     let newNote = new Note({
         name: req.body.name,
         comment: req.body.comment
