@@ -19,12 +19,12 @@ app.get("/", function(req, res){
     res.sendFile(__dirname + "/index.html");
 })
 
-app.post("/", function(req, res){
+app.post("/", async function (req, res) {
     let newNote = new Note({
         name: req.body.name,
         comment: req.body.comment
     })
-    newNote.save();
+    await newNote.save();
     res.redirect("/");
 })
 
