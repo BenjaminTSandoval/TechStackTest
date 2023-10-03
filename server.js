@@ -25,7 +25,7 @@ app.post("/", async function (req, res) {
         comment: req.body.comment
     })
     await newNote.save();
-    res.redirect("/");
+    res.status(200).send(newNote);
 })
 
 app.listen(3000, function(){
