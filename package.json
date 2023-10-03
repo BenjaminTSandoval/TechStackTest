@@ -11,7 +11,10 @@
     "start": "node server.js"
   },
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "netlify-cli": "^16.5.1"
+  }
 }
